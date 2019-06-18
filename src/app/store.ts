@@ -21,13 +21,18 @@ export function rootReducer(state: IAppState, action): IAppState {
         todos: state.todos.concat(newTodo),
         lastUpdated: new Date()
       });
+      
     case DONE:
         const complete = {id: state.completed.length + 1, name: action.name};
+        const index = state.todos.findIndex(el => el.name === action.name);
+       
         return Object.assign({}, state,
         {
+          todo: state.todos.splice(index,1),
           completed: state.completed.concat(complete),
           lastUpdated: new Date()
         });
+
     case DELETE:
       return state;
     case CLEAR_TODOS:

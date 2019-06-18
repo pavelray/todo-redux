@@ -15,6 +15,11 @@
 .todo li{
   cursor: pointer;
 }
+
 .todo span:hover{
+  text-decoration:line-through;
+}
+
+.todo-done{
   text-decoration:line-through;
 }
