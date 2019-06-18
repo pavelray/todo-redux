@@ -1,0 +1,8 @@
+<div class="todo-dashboard p-3">
+  <h3>Dashboard</h3>
+  <label>Pending : {{ (todos | async).length }}</label>
+  <label>Completed : {{ (completed | async).length }}</label>
+  <label>Total : {{ (todos | async).length + (completed | async).length }}</label>
+  <label>Last Updated: {{ (lastUpdated | async) | date:'mediumTime' }}</label>
+  <button class="btn btn-success">Delete All</button>
+</div>
