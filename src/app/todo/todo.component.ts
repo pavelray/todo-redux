@@ -1,3 +1,4 @@
+import { DELETE } from './../action';
 import { IAppState } from './../store';
 import { Component, OnInit } from '@angular/core';
 import {NgRedux, select} from '@angular-redux/store';
@@ -27,6 +28,12 @@ export class TodoComponent implements OnInit {
 
   completedTodo(todo) {
     this.ngRedux.dispatch({type: DONE, name: todo.name});
+  }
+
+  deleteTodo(todo) {
+    if (confirm('This will delete the item permanently')) {
+      this.ngRedux.dispatch({type: DELETE, name: todo.name});
+    }
   }
 
 }

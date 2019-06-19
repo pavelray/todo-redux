@@ -4,5 +4,5 @@
   <label>Completed : {{ (completed | async).length }}</label>
   <label>Total : {{ (todos | async).length + (completed | async).length }}</label>
   <label>Last Updated: {{ (lastUpdated | async) | date:'mediumTime' }}</label>
-  <button class="btn btn-success">Delete All</button>
+  <button class="btn btn-success" (click)="clearTodos()">Delete All</button>
 </div>

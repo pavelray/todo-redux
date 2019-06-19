@@ -1,7 +1,8 @@
-<div class="todo">
+<div class="todo p-3">
+  <h3>Todo</h3>
   <div class="form-group p-3 todo-form">
       <div class="col-md-9">
-        <input type="text" class="form-control" value="" #name/>
+        <input type="text" class="form-control" value="" #name placeholder="Add items here"/>
       </div>
       <div class="col-mds-3 float-right">
         <button class="btn btn-success" (click)="addTodo(name)"><i class="fa fa-plus"></i></button>
@@ -9,20 +10,19 @@
   </div>
   <div class="row p-3">
       <div class="col-md-6">
-          <h3>Pending</h3>
+          <h5 *ngIf="(todos|async).length > 0">Pending</h5>
           <ul class="list-group list-group-flush">
               <li class= "list-group-item d-flex justify-content-between align-items-center" *ngFor='let todo of todos | async'>
                 <span (click)="completedTodo(todo)">{{todo.name}}</span>
-               <button class="btn btn-danger btn-sm"><i class="fa fa-minus"></i></button>
+               <button class="btn btn-danger btn-sm" (click)="deleteTodo(todo)"><i class="fa fa-minus"></i></button>
               </li>
           </ul>
       </div>
       <div class="col-md-6">
-          <h3>Completed</h3>
+          <h5 *ngIf="(completed|async).length > 0">Completed</h5>
           <ul class="list-group list-group-flush">
               <li class= "list-group-item d-flex justify-content-between align-items-center" *ngFor='let complete of completed | async'>
                 <span class="todo-done">{{complete.name}}</span>
-               <button class="btn btn-danger btn-sm"><i class="fa fa-minus"></i></button>
               </li>
           </ul>
       </div>
