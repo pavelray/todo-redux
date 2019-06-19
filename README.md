@@ -5,6 +5,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 # Details
 This is a basic todo app. In this app I used redux for state management. I have coverd basic functionalities. But we can do lot more with this app. I have mentioned few points. Please feel free to add any usefull funcationalities into this project. 
 
+![Thumbnail](redux-todp.jpg)
+
 # Functionality
 1. Adding todo items.
 2. Showing todos on pending list.
@@ -18,6 +20,14 @@ This is a basic todo app. In this app I used redux for state management. I have 
 1. Showing time value of each todo item on creation and modification.
 2. Saving the todo values to server.
 3. Adding Login and Signup. 
+
+## Contributing
+
+Please feel free to send pull request if you want to contribute!
+
+## Authors
+
+- **Pavel Ray** - _Development_ - [Pavel Ray](https://github.com/pavelray)
 
 ## Development server
 
@@ -42,3 +52,5 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
