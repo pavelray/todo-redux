@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 # Details
 This is a basic todo app. In this app I used redux for state management. I have coverd basic functionalities. But we can do lot more with this app. I have mentioned few points. Please feel free to add any usefull funcationalities into this project. 
 
-![Thumbnail](redux-todp.jpg)
+![Thumbnail](redux-todo.jpg)
 
 # Functionality
 1. Adding todo items.
